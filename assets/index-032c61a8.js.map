@@ -1,1 +1,0 @@
-{"version":3,"file":"index-032c61a8.js","sources":["../../src/js/main.js"],"sourcesContent":["\n// import 'normalize.css'\nimport './gallery-pixabay'\nimport './serviceMovie'\nimport './test'\n\n\nconsole.log('sdfsdfsdfsdfsdf')"],"names":[],"mappings":"sGAOA,QAAQ,IAAI,iBAAiB"}
