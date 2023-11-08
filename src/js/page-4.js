@@ -177,7 +177,7 @@ async function allBooksBackend() {
 await allBooksBackend()
     .then((data) => {
     //   console.log(data);
-       createPageAllBooks(data);
+    //    createPageAllBooks(data);
   })
         .catch((err) => console.log(err));
 
