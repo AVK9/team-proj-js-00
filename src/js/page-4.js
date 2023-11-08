@@ -163,23 +163,23 @@ const infoBuyLinks = respArr[0].buy_links.map(({name, url }) =>
 }
 //////////////////////////////////////////////////////////////
 // ---->>>>>>   Популярні книги, що належать до усіх категорій  <<<<<<-----// 
-async function allBooksBackend() {
-    const BASE_URL = 'https://books-backend.p.goit.global/books/top-books';
-    return await fetch(`${BASE_URL}`)
-       .then((resp) => {
-    if (!resp.ok) {
-      throw new Error(resp.statusText);
-    }
-    return resp.json();
-  });
-}
+// async function allBooksBackend() {
+//     const BASE_URL = 'https://books-backend.p.goit.global/books/top-books';
+//     return await fetch(`${BASE_URL}`)
+//        .then((resp) => {
+//     if (!resp.ok) {
+//       throw new Error(resp.statusText);
+//     }
+//     return resp.json();
+//   });
+// }
 
-await allBooksBackend()
-    .then((data) => {
-    //   console.log(data);
-    //    createPageAllBooks(data);
-  })
-        .catch((err) => console.log(err));
+// await allBooksBackend()
+//     .then((data) => {
+//     //   console.log(data);
+//     //    createPageAllBooks(data);
+//   })
+//         .catch((err) => console.log(err));
 
 // function createPageAllBooks(respArr) {
 //     const headPage = `<h1 class="mainHeadPage">Best Sellers Books</h1>`;
