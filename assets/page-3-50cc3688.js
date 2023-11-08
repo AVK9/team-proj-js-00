@@ -7,4 +7,4 @@ import"./modulepreload-polyfill-ec808ebb.js";/* empty css               */const 
           <p>Vote Average: ${s}</p>
           </div>
       </li>`).join("")}let a=0;function p(e,r){a+=1,console.log("counterObserver",a),e.forEach(o=>{o.isIntersecting&&(i+=1,l(i).then(t=>{n.list.insertAdjacentHTML("beforeend",u(t.results)),t.page>=500&&r.unobserve(n.guard)}).catch(t=>console.log(t)))})}
-//# sourceMappingURL=page-3-38837d2b.js.map
+//# sourceMappingURL=page-3-50cc3688.js.map
