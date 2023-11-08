@@ -181,45 +181,45 @@ const infoBuyLinks = respArr[0].buy_links.map(({name, url }) =>
 //   })
 //         .catch((err) => console.log(err));
 
-// function createPageAllBooks(respArr) {
-//     const headPage = `<h1 class="mainHeadPage">Best Sellers Books</h1>`;
-//     let partBoxAllBooks = '';
-//     let pageAllBooks = '';
+function createPageAllBooks(respArr) {
+    const headPage = `<h1 class="mainHeadPage">Best Sellers Books</h1>`;
+    let partBoxAllBooks = '';
+    let pageAllBooks = '';
 
-//     for (let i = 0; i < numberBlocksPage; i++) {
-//     let categoryName = respArr[i].list_name;
-//     let categoryArr = respArr[i].books;
-//     // console.log(categoryArr);
+    for (let i = 0; i < numberBlocksPage; i++) {
+    let categoryName = respArr[i].list_name;
+    let categoryArr = respArr[i].books;
+    // console.log(categoryArr);
     
-//     const pageMarkupAllBooks = categoryArr.map(({ _id,
-//         author,
-//         book_image,
-//         title,}
-//    ) => `
-//       <div class="partCardsListItem photo-card" id="${_id}" >
-//          <img class="imgBestSellersItem" src="${book_image}" alt="${title}">
-//          <p class="nameBestSellersItem">${_id}</p>
-//          <p class="nameBestSellersItem">${title}</p>
-//          <p class="authorBestSellersItem">${author}</p>
-//       </div>
-//        `).join("");
+    const pageMarkupAllBooks = categoryArr.map(({ _id,
+        author,
+        book_image,
+        title,}
+   ) => `
+      <div class="partCardsListItem photo-card" id="${_id}" >
+         <img class="imgBestSellersItem" src="${book_image}" alt="${title}">
+         <p class="nameBestSellersItem">${_id}</p>
+         <p class="nameBestSellersItem">${title}</p>
+         <p class="authorBestSellersItem">${author}</p>
+      </div>
+       `).join("");
     
-//       partBoxAllBooks =
-//       ` <div class="bestSellersPart">
-//               <p class="bestSellersPartName">${categoryName}</p>
-//                  <div class="bestSellersPartCards">
-//                    <div class="partCardsList">
-//                    ${pageMarkupAllBooks}
-//                    </div>
-//                  </div>
-//           </div>
-//           <button class="btnBestSellersSeeMore" category = "${categoryName}">See More</button>
-//       `
-//         pageAllBooks += partBoxAllBooks;
-//     }
-//     // refs.catPage.insertAdjacentHTML('beforeend', headPage + pageAllBooks);
-//     refs.catPage.innerHTML = headPage + pageAllBooks;
-// }
+      partBoxAllBooks =
+      ` <div class="bestSellersPart">
+              <p class="bestSellersPartName">${categoryName}</p>
+                 <div class="bestSellersPartCards">
+                   <div class="partCardsList">
+                   ${pageMarkupAllBooks}
+                   </div>
+                 </div>
+          </div>
+          <button class="btnBestSellersSeeMore" category = "${categoryName}">See More</button>
+      `
+        pageAllBooks += partBoxAllBooks;
+    }
+    // refs.catPage.insertAdjacentHTML('beforeend', headPage + pageAllBooks);
+    refs.catPage.innerHTML = headPage + pageAllBooks;
+}
 
 // На стр. BestSellers вікриваемо інфо про книгу або відрацьовуемо клік по кнопці SeeMore
 refs.catPage.addEventListener('click', onBookSwitch);
