@@ -1,3 +1,5 @@
+import throttle from 'lodash.throttle';
+
 const refs = {
     form: document.querySelector('#search-form'),
     dataInput: document.querySelector('.search-input'),
@@ -111,36 +113,44 @@ observer.observe(refs.guard);
 };
 
 //////////////////////////////////////
-
-
 const goTopBtn = document.querySelector(".go-top");
 
 window.addEventListener("scroll", trackScroll);
-
-goTopBtn.addEventListener("click", goTop);
-
 function trackScroll() {
-
-  const scrolled = window.pageYOffset;
-
+  const scrolled = window.scrollY;
   const coords = document.documentElement.clientHeight;
+  // console.log(document.documentElement.scrollTop); //scrollY  
+  // console.log(scrolled);
+  // console.log(coords); // innerHeight=clientHeight
+  // console.log(window.innerHeight);
+  // console.log(document.documentElement.scrollHeight);
+  
 
-  if (scrolled > coords) {
 
+
+  if (scrolled  > coords) {
     goTopBtn.classList.add("go-top--show");
   } else {
-
     goTopBtn.classList.remove("go-top--show");
   }
 }
-
+goTopBtn.addEventListener("click", goTop);
 function goTop() {
-
-  if (window.pageYOffset > 0) {
-  
+  if (window.scrollY > 0) {
     window.scrollBy(0, -25);
     setTimeout(goTop, 0); 
   }
 }
 
+// goTopBtn.addEventListener("click", () => {
+//     window.scrollTo({
+//         top: 0,
+//         behavior: "smooth",
+//     });
+// });
+
+
+
 ////////////////////////////////
+
+// refs.loadmoreBtn.hidden = true;
