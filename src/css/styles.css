@@ -29,3 +29,12 @@
   height: 100vh;
   background-color: rgb(159, 159, 233);
 }
+
+.btnBestSellersSeeMore {
+  height: 45px;
+  width: 150px;
+  background-color: aqua;
+}
+.hidden {
+  display: none;
+}
